@@ -1,0 +1,80 @@
+#include <bits/stdc++.h>
+using namespace std; 
+ 
+#define tc int tt; cin >> tt; while(tt--)
+#define gtc int t, tt = 1; cin >> t; for(tt; tt <= t; tt++)
+#define gprinttest cout << "Case #" << tt << ": "
+ 
+typedef long long int ll;
+typedef long double ld;
+typedef vector<bool> vb;
+typedef vector<int> vi;
+typedef vector<long long> vll;
+typedef vector<char> vc;
+typedef vector<pair<int, int>> vii;
+typedef vector<pair<int, char>> vic;
+typedef vector<pair<char, int>> vci;
+typedef vector<pair<char, char>> vcc;
+typedef vector<vector<int>> vvi;
+typedef vector<vector<long long>> vvll;
+typedef vector<vector<char>> vvc;
+typedef map<int, int> mii;
+typedef map<char, int> mci;
+typedef set<int> si;
+typedef set<char> sc;
+typedef multiset<int> msi;
+typedef multiset<char> msc;
+typedef priority_queue<int> maxhi;
+typedef priority_queue<ll> maxhll;
+typedef priority_queue <int, vector<int>, greater<int>> minhi;
+typedef priority_queue <ll, vector<ll>, greater<ll>> minhll;
+ 
+const int inf = INT_MAX;
+const ll llinf = LLONG_MAX;
+const int mod = 1000000007;
+// const int mod = 998244353;
+const int N = 1e9;
+ 
+#define nline "\n"
+#define rep_u(i, a, b) for(int i = a; i < b; i++)
+#define rep_d(i, a, b) for(int i = a; i >= b; i--)
+#define sz(x) (int)x.size()
+#define pb push_back
+#define mp make_pair
+#define all(x) (x).begin(), (x).end()
+#define pcnt(x) __builtin_popcountll(x)
+#define clz(x) __builtin_clzll(x)
+#define ctz(x) __builtin_ctzll(x)     
+// cout << setprecision(6) << fixed << ans << nline; make template
+ 
+void solve(){
+    int n, ans = 0;
+    cin >> n;
+    vb arr(N, true);
+    rep_u(i, 0, n){
+        int num;
+        cin >> num;
+        if(arr[num - 1]) ans++;
+        arr[num - 1] = false;
+    }
+    cout << ans << nline;
+    return;
+}
+ 
+int32_t main(){
+ 
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    
+    #ifndef ONLINE_JUDGE
+        freopen("input.txt", "r", stdin);
+        freopen("output.txt", "w", stdout); 
+    #endif
+ 
+    // tc
+    {
+        solve();
+    }
+    return 0;
+}
